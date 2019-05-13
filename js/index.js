@@ -37,6 +37,42 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+//  Example: Update the img src for the logo
+ let logo = document.querySelector("#logo-img");
+ logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let myNav = document.querySelectorAll('header nav a')
+myNav[0].textContent = siteContent["nav"]["nav-item-1"];
+myNav[1].textContent = siteContent["nav"]["nav-item-2"];
+myNav[2].textContent = siteContent["nav"]["nav-item-3"];
+myNav[3].textContent = siteContent["nav"]["nav-item-4"];
+myNav[4].textContent = siteContent["nav"]["nav-item-5"];
+myNav[5].textContent = siteContent["nav"]["nav-item-6"];
+myNav.forEach(x => x.style.color = 'green');
+
+
+let headerImg = document.querySelector("#cta-img");
+ headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//  cta.querySelector('h1').textContent = siteContent['cta']['h1'];
+//  cta.querySelector('button').textContent = siteContent['cta']['button'];
+ 
+
+
+
+let mainContentIMG = document.querySelector("#middle-img");
+mainContentIMG.src = siteContent["main-content"]["middle-img-src"];
+
+
+
+let mainContent = document.querySelectorAll("div.text-content");
+mainContent[0].childNodes[1].textContent = siteContent["main-content"]["features-h4"];
+mainContent[0].childNodes[3].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].childNodes[1].textContent = siteContent["main-content"]["about-h4"];
+mainContent[1].childNodes[3].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].childNodes[1].textContent = siteContent["main-content"]["services-h4"];
+mainContent[2].childNodes[3].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].childNodes[1].textContent = siteContent["main-content"]["product-h4"];
+mainContent[3].childNodes[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].childNodes[1].textContent = siteContent["main-content"]["vision-h4"];
+mainContent[4].childNodes[3].textContent = siteContent["main-content"]["vision-content"];
