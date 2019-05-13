@@ -48,14 +48,31 @@ myNav[2].textContent = siteContent["nav"]["nav-item-3"];
 myNav[3].textContent = siteContent["nav"]["nav-item-4"];
 myNav[4].textContent = siteContent["nav"]["nav-item-5"];
 myNav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// add the text from cta
+const cta = document.querySelector('.cta')
+  cta.querySelector('h1').textContent = siteContent['cta']['h1'];
+
+  // add the button t cta
+  cta.querySelector('button').textContent = siteContent['cta']['button'];
+
+// turn nav green
 myNav.forEach(x => x.style.color = 'green');
 
+//creation of two new a tags in the header 
+let a = document.createElement("a");
+a.textContent = "Free Stuff ";
+let header = document.querySelector("nav");
+header.prepend(a);
+let b = document.createElement("a");
+let secondA = document.querySelector("nav a:nth-child(2)");
+b.textContent = "Buy Stuff";
+header.appendChild(b);
 
 let headerImg = document.querySelector("#cta-img");
  headerImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-//  cta.querySelector('h1').textContent = siteContent['cta']['h1'];
-//  cta.querySelector('button').textContent = siteContent['cta']['button'];
+  
  
 
 
@@ -76,3 +93,7 @@ mainContent[3].childNodes[1].textContent = siteContent["main-content"]["product-
 mainContent[3].childNodes[3].textContent = siteContent["main-content"]["product-content"];
 mainContent[4].childNodes[1].textContent = siteContent["main-content"]["vision-h4"];
 mainContent[4].childNodes[3].textContent = siteContent["main-content"]["vision-content"];
+
+
+let footer = document.querySelectorAll('footer');
+footer[0].childNodes[1].textContent = siteContent["footer"]["p"];
