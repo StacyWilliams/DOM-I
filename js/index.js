@@ -54,7 +54,10 @@ const cta = document.querySelector('.cta')
   cta.querySelector('h1').textContent = siteContent['cta']['h1'];
 
   // add the button t cta
-  cta.querySelector('button').textContent = siteContent['cta']['button'];
+ let ctaButton = cta.querySelector('button')
+ ctaButton.textContent = siteContent['cta']['button'];
+ ctaButton.style.backgroundColor = 'pink';
+  
 
 // turn nav green
 myNav.forEach(x => x.style.color = 'green');
@@ -95,5 +98,12 @@ mainContent[4].childNodes[1].textContent = siteContent["main-content"]["vision-h
 mainContent[4].childNodes[3].textContent = siteContent["main-content"]["vision-content"];
 
 
-let footer = document.querySelectorAll('footer');
-footer[0].childNodes[1].textContent = siteContent["footer"]["p"];
+let contact = document.querySelector('.contact');
+contact.childNodes[1].textContent = siteContent["contact"]["contact-h4"];
+contact.childNodes[3].textContent = siteContent["contact"]["address"];
+contact.childNodes[5].textContent = siteContent["contact"]["phone"];
+contact.childNodes[7].textContent = siteContent["contact"]["email"];
+
+
+let footer = document.querySelector('footer');
+footer.childNodes[1].textContent = siteContent["footer"]["copyright"];
